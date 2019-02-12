@@ -6,11 +6,12 @@ RUN apk add --no-cache \
         nginx \
         tzdata && \
     mkdir -p /run/nginx && \
+    mkdir -p /public && \
     mv /default.conf /etc/nginx/conf.d && \
     mv /php.ini /usr/local/etc/php && \
     chmod +x /docker-entrypoint.sh && \
-    git clone https://github.com/hackswM/one2019.git /var/www/html
+    git clone https://github.com/hackswM/one2019.git /public
 
 # Persistent config file and cache
-VOLUME [ "/var/www/html/config", "/var/www/html/cache" ]
+VOLUME [ "/public/config", "/public/cache" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
