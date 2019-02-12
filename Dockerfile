@@ -3,6 +3,7 @@ COPY docker-entrypoint.sh php.ini default.conf /
 RUN apk add --no-cache \
         bash \
         nginx \
+        git \
         tzdata && \
     mkdir -p /run/nginx && \
     mkdir -p /public && \
