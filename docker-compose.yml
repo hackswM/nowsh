@@ -10,5 +10,5 @@ services:
     # - SSH_PASSWORD=root
     # - TZ=Asia/Shanghai
     volumes:
-    - ./config:/var/www/html/config
-    - ./cache:/var/www/html/cache
+    - ./config:/public/config
+    - ./cache:/public/cache
