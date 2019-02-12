@@ -1,5 +1,4 @@
 FROM php:fpm-alpine
-
 COPY docker-entrypoint.sh php.ini default.conf /
 RUN apk add --no-cache \
         bash \
